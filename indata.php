@@ -4,9 +4,9 @@ if(!$con)
 {echo "not connected";}
 else
 {	echo "connected";}
-$name = $_POST["user"];
-$email = $_POST["mail"];
-$branch = $_POST["branch"];
+$name = $_GET["user"];
+$email = $_GET["mail"];
+$branch = $_GET["branch"];
 mysqli_select_db($con,'college');
 $sql ="INSERT INTO PLAYGROUND(NAME,EMAIL,BRANCH) VALUES('$name','$email','$branch')";
 if(mysqli_query($con,$sql))
